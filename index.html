@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Color generator</title>
+
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form-container" id="form-1">
+            <input type="color" name="color" id="color">
+            <select name="mode" id="mode" class="color-mode">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+            <input type="submit" class="btn btn-submit" value="Get color scheme">
+        </form>
+        <div class="color-container">
+            <div class="choice-container color-1">
+                <div class="color-choice"></div>
+                <p class="color-hex">#000000</p>
+            </div>
+            <div class="choice-container color-2">
+                <div class="color-choice"></div>
+                <p class="color-hex">#000000</p>
+            </div>
+            <div class="choice-container color-3">
+                <div class="color-choice"></div>
+                <p class="color-hex">#000000</p>
+            </div>
+            <div class="choice-container color-4">
+                <div class="color-choice"></div>
+                <p class="color-hex">#000000</p>
+            </div>
+            <div class="choice-container color-5">
+                <div class="color-choice"></div>
+                <p class="color-hex">#000000</p>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/scripts.js" defer></script>
+</body>
+</html>

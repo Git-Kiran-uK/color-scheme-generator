@@ -21,11 +21,11 @@
 <body>
     <div class="container">
         <form class="form-container" id="form-1">
-            <input type="color" name="color" id="color">
+            <input type="color" name="color" id="color" value="#7b2cbf">
             <div class="dropdown">
-                <div class="dropdown-selected">Select an option <i class="fa-solid fa-angle-down" style="color: #9ca3af;"></i></div>
+                <div class="dropdown-selected">Monochrome <i class="fa-solid fa-angle-down" style="color: #9ca3af;"></i></div>
                 <ul class="dropdown-options">
-                    <li data-value="monochrome">Monochrome</li>
+                    <li data-value="monochrome" class="selected">Monochrome</li>
                     <li data-value="monochrome-dark">Monochrome dark</li>
                     <li data-value="monochrome-light">Monochrome light</li>
                     <li data-value="analogic">Analogic</li>
@@ -35,7 +35,7 @@
                     <li data-value="quad">Quad</li>
                   </ul>
             </div>
-            <input type="hidden" name="mode" id="">
+            <input type="hidden" name="mode" id="color-mode" value="monochrome">
             <input type="submit" class="btn btn-submit" value="Get color scheme">
         </form>
         <div class="color-container">

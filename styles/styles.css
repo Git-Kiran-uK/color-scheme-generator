@@ -15,6 +15,8 @@ body{
     min-height: 100vh;
     display: grid;
     place-content: center;
+    background-color: #1C1C1C;
+    color: #D5D4D8;
 }
 
 /* ============
@@ -53,7 +55,7 @@ p{
 .container{
     width: var(--container-size);
     height: var(--container-size);
-    border: 1px solid #ccc;
+    background-color: #1F2937;
 }
 
 .form-container{
@@ -64,9 +66,11 @@ p{
 }
 
 /* form */
+.container,
 .btn-submit,
+.dropdown-options,
 .dropdown-selected,
-.dropdown-options{
+input[type="color"]{
     border-radius: 3px;
 }
 
@@ -86,9 +90,9 @@ input[type="color"]{
     border: 1px solid #D1D5DB;
     padding: .8em;
     font-family: inherit;
-    background-color: transparent;
+    background-color: #3D4B60;
+    color: #FFF;
 }
-
 
 .dropdown{
     flex: 1;
@@ -110,8 +114,7 @@ input[type="color"]{
     top: 110%;
     left: 0;
     right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: #1F2937;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -127,7 +130,7 @@ input[type="color"]{
 }
 
 .dropdown-options li:hover {
-    background: #f0f0f0;
+    background: #3D4B60;
   }
 
 .dropdown-options li.selected::after {
@@ -138,4 +141,4 @@ input[type="color"]{
 
 .dropdown.active ul.dropdown-options {
     display: block;
-  }
+}

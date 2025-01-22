@@ -14,21 +14,28 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
         <form class="form-container" id="form-1">
             <input type="color" name="color" id="color">
-            <select name="mode" id="mode" class="color-mode">
-                <option value="monochrome">Monochrome</option>
-                <option value="monochrome-dark">Monochrome-dark</option>
-                <option value="monochrome-light">Monochrome-light</option>
-                <option value="analogic">Analogic</option>
-                <option value="complement">Complement</option>
-                <option value="analogic-complement">Analogic-complement</option>
-                <option value="triad">Triad</option>
-                <option value="quad">Quad</option>
-            </select>
+            <div class="dropdown">
+                <div class="dropdown-selected">Select an option <i class="fa-solid fa-angle-down" style="color: #9ca3af;"></i></div>
+                <ul class="dropdown-options">
+                    <li data-value="monochrome">Monochrome</li>
+                    <li data-value="monochrome-dark">Monochrome dark</li>
+                    <li data-value="monochrome-light">Monochrome light</li>
+                    <li data-value="analogic">Analogic</li>
+                    <li data-value="analogic-complement">Analogic complement</li>
+                    <li data-value="complement">Complement</li>
+                    <li data-value="triad">Triad</li>
+                    <li data-value="quad">Quad</li>
+                  </ul>
+            </div>
+            <input type="hidden" name="mode" id="">
             <input type="submit" class="btn btn-submit" value="Get color scheme">
         </form>
         <div class="color-container">
@@ -55,5 +62,8 @@
         </div>
     </div>
     <script src="./scripts/scripts.js" defer></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

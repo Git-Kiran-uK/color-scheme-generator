@@ -4,6 +4,8 @@ const options = document.querySelectorAll('.dropdown-options li');
 const hiddenInput = document.getElementById('color-mode');
 const form = document.getElementById('form-1');
 const colorContainer = document.querySelectorAll('.choice-container');
+const colorChoice = document.querySelectorAll('.color-choice');
+const notify = document.getElementById('notification');
 
 selected.addEventListener('click', () => {
     dropdown.classList.toggle('active');
@@ -47,8 +49,31 @@ function displayColor(colorArray){
     for(let i = 0; i < colorContainer.length; i++){
         const hexColor = colorArray[i].hex.value;
         colorContainer[i].children[0].style.backgroundColor = hexColor;
+        colorContainer[i].children[0].dataset.color = hexColor;
         colorContainer[i].children[1].textContent = hexColor;
     }
+    setCopyToClipboard();
+}
+
+function setCopyToClipboard(){
+    colorChoice.forEach(choice => {
+        choice.addEventListener('mouseover', () => {
+            choice.classList.add('hovered');
+        });
+        choice.addEventListener('click', () => {
+            const color = choice.getAttribute('data-color');
+            navigator.clipboard.writeText(color)
+            .then(() => {
+                notify.style.display = 'block';
+                notify.textContent = `The color ${color} is copied to clipboard`;
+                setTimeout(() => notify.style.display = 'none', 1500)
+            })
+            .catch(() => alert(`Failed to copy the color ${color}`));
+        });
+        choice.addEventListener('mouseleave', () => {
+            choice.classList.remove('hovered');
+        });
+    });
 }
 
 getFormData();

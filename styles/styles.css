@@ -29,6 +29,13 @@ p{
     text-align: center;
 }
 
+p#notification{
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: .4px;
+    color: #E83151;
+}
+
 /* =========
     Layout
 ============ */
@@ -63,6 +70,21 @@ p{
     justify-content: space-between;
     align-items: center;
     gap: 1em;
+}
+
+.color-choice{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hovered::after{
+    font-size: 3rem;
+    content: '\f0c5';
+    font-family: 'FontAwesome';
+    color: #D1D5DB80;
 }
 
 /* form */

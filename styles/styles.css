@@ -63,6 +63,7 @@ p#notification{
     width: var(--container-size);
     height: var(--container-size);
     background-color: #1F2937;
+    position: relative;
 }
 
 .form-container{
@@ -85,6 +86,13 @@ p#notification{
     content: '\f0c5';
     font-family: 'FontAwesome';
     color: #D1D5DB80;
+}
+
+p#notification{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50px;
 }
 
 /* form */
